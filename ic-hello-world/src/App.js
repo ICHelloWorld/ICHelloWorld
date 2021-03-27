@@ -3,9 +3,9 @@ import './App.css';
 import {Counter} from './features/counter/Counter';
 import logo from './logo.svg';
 import {Link} from 'react-router-dom';
+//import {addMessage} from './Messaging';
 
 function App() {
-
 
   return (
     <div>
@@ -17,11 +17,13 @@ function App() {
       </ul>
       <p>News box should be here </p>
       <div>
-      <form action="/action_page.php">
-        <input type="text" id="message"></input><br/><br/>
-        <input type="submit" value="Submit"></input>
+      <form action="/action_page.php" class="message-form">
+        <textarea>Messages</textarea>
+        <input type="text" id="message" placeholder="Your message..." autofocus></input>
+        <input type="submit" value="Send"></input>
       </form>
       </div>
+      <div class="messages"></div>
     </div>
   );
 }
