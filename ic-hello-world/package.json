@@ -38,6 +38,7 @@
     "@tailwindcss/forms": "^0.3.2",
     "@tailwindcss/postcss7-compat": "^2.0.4",
     "autoprefixer": "^9.8.6",
+    "firebaseui": "^4.8.0",
     "postcss": "^7.0.35",
     "react-router-dom": "^5.2.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
