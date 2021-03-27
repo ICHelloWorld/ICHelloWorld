@@ -37,3 +37,10 @@
     transform: translateY(0px)
   }
 }
+
+.homepage {
+    color: red;
+    margin-left: 50%;
+    margin-right: 50%;
+
+}

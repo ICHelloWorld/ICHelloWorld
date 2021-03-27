@@ -4,21 +4,11 @@ import {Counter} from './features/counter/Counter';
 import logo from './logo.svg';
 
 function App() {
-
-  var bool = false
-  let x;
-  if (bool) {
-    x = 1;
-  } else {
-    x = 2;
-  }
-
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo"/>
         <Counter/>
-        <p>{x}</p>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
