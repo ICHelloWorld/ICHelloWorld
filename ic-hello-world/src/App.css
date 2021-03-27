@@ -45,6 +45,10 @@
 
 }
 
+.textBox{
+  margin: 5px;
+}
+
 ul {
 list-style-type: none;
 margin: 0;
@@ -68,9 +72,9 @@ text-decoration: none;
 li a:hover {
 background-color: #111;
 }
-textarea {
+.textBox {
 width: 100%;
-height: 150px;
+height: 200px;
 padding: 12px 20px;
 box-sizing: border-box;
 border: 2px solid #ccc;
@@ -90,7 +94,20 @@ border: 1px solid #ccc;
 border-radius: 4px;
 box-sizing: border-box;
 }
-input[type=submit] {
+.Messages{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    flex-direction: column;
+    width: 100%;
+    margin: 1% auto;
+    padding: 2% auto;
+    background-color: var(--primary-color);
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+button {
 width: 5%;
 background-color: #4CAF50;
 color: white;

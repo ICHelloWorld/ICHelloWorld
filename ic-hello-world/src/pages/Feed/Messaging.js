@@ -1,10 +1,8 @@
-import React from 'react';
-
 //Create an array where the message along with it's ID will be stored.
 let message = [];
 
 // This fuction will enables us to add the message to the DOM
-export default function addMessage(text){
+export default function AddMessage(text){
     //Object where message will be stored
     const chat = {
         text,
@@ -21,8 +19,6 @@ export default function addMessage(text){
         </p>`
 
     );
-
-    // Delete the message from the screen after 2 seconds
 
 }
 
@@ -46,16 +42,3 @@ form.addEventListener('submit', event => {
 
     }
 });
-
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    }
-    else {
-        document.documentElement.setAttribute('data-theme', 'light');
-    }
-}
-
-toggleSwitch.addEventListener('change', switchTheme, false);
