@@ -108,19 +108,6 @@ function SearchNew() {
           </div>
         </div>
       </div>
-
-      <div left="50px" position="relative">
-        <div className={"col-span-6 sm:col-span-3 lg:col-span-2"}>
-          <div>
-            <label className={"block text-sm font-medium text-gray-700"}>Morning
-              Scrub? </label>
-          </div>
-          <div>
-            <input className={"rounded-md text-gray-500"} value="isMorningScrub"
-                   type="checkbox"></input>
-          </div>
-        </div>
-      </div>
     </div>
   )
 }
