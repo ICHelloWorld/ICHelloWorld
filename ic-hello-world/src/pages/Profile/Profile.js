@@ -1,4 +1,12 @@
+import {notification} from "antd";
 import {app} from "../../firebaseConfig"
+
+const openNotificationWithIcon = (type, desc = "Done!") => {
+  notification[type]({
+    message: "Success",
+    description: desc,
+  });
+};
 
 export default function ProfilePage() {
 
@@ -149,11 +157,11 @@ export default function ProfilePage() {
       howmanypeople: howmanypeople.value,
     }
     console.log(data)
-    let submitProfile = app.functions().httpsCallable('submitProfile');
-    submitProfile(data)
+    const db = app.firestore()
+    db.collections("profile").add(data)
       .then((result) => {
         // Read result of the Cloud Function.
-        alert(result)
+        openNotificationWithIcon("success")
       })
       .catch((error) => {
         // Getting the Error details.
@@ -161,8 +169,9 @@ export default function ProfilePage() {
         var message = error.message;
         var details = error.details;
         // ...
-        alert(message)
-      });
+        openNotificationWithIcon("success", message)
+      })
+
   }
 
   const PersonalInfo = () => {
