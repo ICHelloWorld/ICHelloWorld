@@ -45,7 +45,8 @@ export default function Feed() {
         addMessage("cannot get message")
       }
     })
-  };
+  }
+  ;
 
   return (
     <div>
@@ -66,7 +67,9 @@ export default function Feed() {
           <input type="text" className="typedMessage"
                  placeholder="Your message..."
                  autofocus/>
-          <button className="submit">Send</button>
+          <button
+            className="submit m-1 p-2 bg-blue-600 rounded-xl text-white text-sm">Send
+          </button>
         </form>
       </div>
     </div>
