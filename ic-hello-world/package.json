@@ -8,10 +8,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "firebase": "^8.3.1",
+    "getstream": "^7.2.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.3",
-    "react-scripts": "4.0.3"
+    "react-scripts": "4.0.3",
+    "stream-chat-react": "^5.0.3"
   },
   "scripts": {
     "start": "craco start",
@@ -38,8 +41,12 @@
     "@tailwindcss/forms": "^0.3.2",
     "@tailwindcss/postcss7-compat": "^2.0.4",
     "autoprefixer": "^9.8.6",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "firebaseui": "^4.8.0",
     "postcss": "^7.0.35",
     "react-router-dom": "^5.2.0",
+    "stream-chat": "^3.7.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
   }
 }
