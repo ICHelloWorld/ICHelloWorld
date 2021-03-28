@@ -4,6 +4,8 @@ import App from "../../App";
 import Housing from '../../pages/Housing/Housing'
 import ProfilePage from "../../pages/Profile/Profile";
 import Search from "../../pages/Search/Search";
+import Feed from '../../pages/Feed/Feed'
+
 
 export default function Routing() {
   return (
@@ -16,7 +18,7 @@ export default function Routing() {
         {/* Search profiles */}
         <Route exact path="/search" component={Search}/>
         {/* Search houses */}
-        <Route exact path="/feed" component={Housing}/>
+        <Route exact path="/feed" component={Feed}/>
       </Switch>
     </Router>
   )
