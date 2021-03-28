@@ -8,8 +8,8 @@ function App() {
   const LinkButton = ({val, link}) => {
     return (
       <button
-        className={"bg-gradient-to-r from-blue-600 to-orange-600 text-white p-4 " +
-        "rounded-xl hover:scale-105 transform duration-150 font-bold focus:outline-none"}
+        className={"bg-gradient-to-r from-blue-600 to-orange-600 text-white p-4 text-center" +
+        "rounded-xl hover:scale-105 transform duration-150 font-bold focus:outline-none rounded-xl"}
         onClick={() => history.push(`${link}`)}
       >
         {val}
@@ -20,12 +20,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo"/>
-        {/*<Counter/>*/}
         <h1
-          className={"text-4xl text-gray-900 text-center font-bold"}>FlatHunt</h1>
+          className={"text-4xl text-gray-900 text-center font-bold"}>
+          FlatHunt
+        </h1>
         <div className={"grid grid-cols-3 p-8 gap-4 mt-8"}>
           <LinkButton val={"Profile"} link={"/profile"}/>
-          <LinkButton val={"Housing"} link={"/housing"}/>
+          <LinkButton val={"Feed"} link={"/feed"}/>
           <LinkButton val={"Search"} link={"/search"}/>
         </div>
       </header>
