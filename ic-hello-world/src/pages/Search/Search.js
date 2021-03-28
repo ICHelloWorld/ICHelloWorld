@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 export default function Search() {
     return (
         /*
@@ -10,7 +12,16 @@ export default function Search() {
       </div>
     </div>
          */
+
         <div>
+        <div class="heading">
+          <ul>
+            <li><Link to="/"> Home</Link></li>
+            <li><Link to="/profile"> Profile</Link></li>
+            <li><Link to="/search"> Search</Link></li>
+            <li><Link to="/feed"> Feed</Link></li>
+          </ul>
+        </div>
             <div className={"bg-gray-100 text-center text-4xl text-blue-600 font-bold py-8"}>
                 <h1>Search Page</h1>
             </div>

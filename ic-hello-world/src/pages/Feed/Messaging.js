@@ -1,5 +1,5 @@
 //Create an array where the message along with it's ID will be stored.
-let message = [];
+/*let message = [];
 
 // This fuction will enables us to add the message to the DOM
 export default function AddMessage(text){
@@ -42,3 +42,4 @@ form.addEventListener('submit', event => {
 
     }
 });
+*/
