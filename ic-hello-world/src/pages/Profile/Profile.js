@@ -1,3 +1,5 @@
+import {app} from "../../firebaseConfig"
+
 export default function ProfilePage() {
 
   const PageBreak = () => {
@@ -127,8 +129,40 @@ export default function ProfilePage() {
     )
   }
 
-  function handleProfileForm() {
-
+  function handleProfileForm(event) {
+    event.preventDefault();
+    let {
+      first_name, last_name, email_address, description, languages,
+      pricerange, shortcode, year, department, howmanypeople,
+    } = event.target.elements;
+    console.log(event.target.elements)
+    let data = {
+      firstname: first_name.value,
+      lastname: last_name.value,
+      email: email_address.value,
+      description: description.value,
+      languages: languages.value,
+      pricerange: pricerange.value,
+      shortcode: shortcode.value,
+      year: year.value,
+      department: department.value,
+      howmanypeople: howmanypeople.value,
+    }
+    console.log(data)
+    let submitProfile = app.functions().httpsCallable('submitProfile');
+    submitProfile(data)
+      .then((result) => {
+        // Read result of the Cloud Function.
+        alert(result)
+      })
+      .catch((error) => {
+        // Getting the Error details.
+        var code = error.code;
+        var message = error.message;
+        var details = error.details;
+        // ...
+        alert(message)
+      });
   }
 
   const PersonalInfo = () => {
@@ -196,7 +230,8 @@ export default function ProfilePage() {
                       <label htmlFor="description"
                              className="block text-sm font-medium text-gray-700">A
                         little bit about yourself!</label>
-                      <textarea name={"description"}
+                      <textarea name="description"
+                                id={"description"}
                                 rows="3"
                                 className="shadow-sm focus:ring-indigo-500
                                 focus:border-indigo-500 mt-1 block w-full
