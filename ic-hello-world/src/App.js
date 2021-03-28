@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
 import {Counter} from './features/counter/Counter';
-import logo from './logo.svg';
+import logo from './logo.png';
 import {Link} from 'react-router-dom';
-
 
 function App() {
   return (
