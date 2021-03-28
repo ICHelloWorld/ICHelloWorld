@@ -32,10 +32,10 @@ export default function ProfilePage() {
       department: department.value || "",
       howmanypeople: howmanypeople.value || "",
     }
-    console.log(data)
-    const db = app.firestore()
+    console.log(data);
+    const db = app.firestore();
     db.collection("profile").add(data)
-      .then((result) => {
+      .then(() => {
         // Read result of the Cloud Function.
         alert("success")
       })
@@ -45,7 +45,7 @@ export default function ProfilePage() {
         var message = error.message;
         var details = error.details;
         // ...
-        alert("success", message)
+        alert("error: " + message)
       })
 
   }

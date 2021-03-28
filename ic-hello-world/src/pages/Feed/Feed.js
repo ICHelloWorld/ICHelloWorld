@@ -1,7 +1,9 @@
 import {Link} from 'react-router-dom';
+import {app} from "../../firebaseConfig"
 //import {AddMessage} from './Messaging';
 let message = [];
 export default function Feed() {
+  const messaging = app.messaging();
   //Create an array where the message along with it's ID will be stored.
 
   // This fuction will enables us to add the message to the DOM
